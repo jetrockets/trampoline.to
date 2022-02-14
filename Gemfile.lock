@@ -1,6 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    action_policy (0.6.0)
+      ruby-next-core (>= 0.11.0)
     actioncable (7.0.2.2)
       actionpack (= 7.0.2.2)
       activesupport (= 7.0.2.2)
@@ -68,6 +70,14 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
+    appsignal (3.0.20)
+      rack
+    ast (2.4.2)
+    authlogic (6.4.2)
+      activemodel (>= 5.2, < 7.1)
+      activerecord (>= 5.2, < 7.1)
+      activesupport (>= 5.2, < 7.1)
+      request_store (~> 1.0)
     bindex (0.8.1)
     bootsnap (1.10.3)
       msgpack (~> 1.2)
@@ -84,25 +94,30 @@ GEM
     childprocess (4.1.0)
     concurrent-ruby (1.1.9)
     crass (1.0.6)
+    cssbundling-rails (1.0.0)
+      railties (>= 6.0.0)
     debug (1.4.0)
       irb (>= 1.3.6)
       reline (>= 0.2.7)
+    diff-lcs (1.5.0)
     digest (3.1.0)
     erubi (1.10.0)
+    friendly_id (5.4.2)
+      activerecord (>= 4.0.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.9.1)
       concurrent-ruby (~> 1.0)
-    importmap-rails (1.0.2)
-      actionpack (>= 6.0.0)
-      railties (>= 6.0.0)
     io-console (0.5.11)
     io-wait (0.2.1)
     irb (1.4.1)
       reline (>= 0.3.0)
-    jbuilder (2.11.5)
-      actionview (>= 5.0.0)
-      activesupport (>= 5.0.0)
+    jetrockets-standard (1.2.2)
+      rubocop-rails
+      rubocop-rspec (~> 2.7.0)
+      standard (~> 1.7.0)
+    jsbundling-rails (1.0.0)
+      railties (>= 6.0.0)
     loofah (2.14.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -132,6 +147,10 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.1-arm64-darwin)
       racc (~> 1.4)
+    parallel (1.21.0)
+    parser (3.1.0.0)
+      ast (~> 2.4.1)
+    pg (1.3.2)
     public_suffix (4.0.6)
     puma (5.6.2)
       nio4r (~> 2.0)
@@ -158,6 +177,9 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.4.2)
       loofah (~> 2.3)
+    rails-i18n (7.0.2)
+      i18n (>= 0.7, < 2)
+      railties (>= 6.0.0, < 8)
     railties (7.0.2.2)
       actionpack (= 7.0.2.2)
       activesupport (= 7.0.2.2)
@@ -165,12 +187,54 @@ GEM
       rake (>= 12.2)
       thor (~> 1.0)
       zeitwerk (~> 2.5)
+    rainbow (3.1.1)
     rake (13.0.6)
     redis (4.6.0)
     regexp_parser (2.2.1)
     reline (0.3.1)
       io-console (~> 0.5)
+    request_store (1.5.1)
+      rack (>= 1.4)
     rexml (3.2.5)
+    rspec-core (3.11.0)
+      rspec-support (~> 3.11.0)
+    rspec-expectations (3.11.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.11.0)
+    rspec-mocks (3.11.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.11.0)
+    rspec-rails (5.1.0)
+      actionpack (>= 5.2)
+      activesupport (>= 5.2)
+      railties (>= 5.2)
+      rspec-core (~> 3.10)
+      rspec-expectations (~> 3.10)
+      rspec-mocks (~> 3.10)
+      rspec-support (~> 3.10)
+    rspec-support (3.11.0)
+    rubocop (1.25.1)
+      parallel (~> 1.10)
+      parser (>= 3.1.0.0)
+      rainbow (>= 2.2.2, < 4.0)
+      regexp_parser (>= 1.8, < 3.0)
+      rexml
+      rubocop-ast (>= 1.15.1, < 2.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (>= 1.4.0, < 3.0)
+    rubocop-ast (1.15.2)
+      parser (>= 3.0.1.1)
+    rubocop-performance (1.13.2)
+      rubocop (>= 1.7.0, < 2.0)
+      rubocop-ast (>= 0.4.0)
+    rubocop-rails (2.13.2)
+      activesupport (>= 4.2.0)
+      rack (>= 1.1)
+      rubocop (>= 1.7.0, < 2.0)
+    rubocop-rspec (2.7.0)
+      rubocop (~> 1.19)
+    ruby-next-core (0.14.1)
+    ruby-progressbar (1.11.0)
     rubyzip (2.3.2)
     selenium-webdriver (4.1.0)
       childprocess (>= 0.5, < 5.0)
@@ -183,7 +247,9 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.2)
+    standard (1.7.2)
+      rubocop (= 1.25.1)
+      rubocop-performance (= 1.13.2)
     stimulus-rails (1.0.2)
       railties (>= 6.0.0)
     strscan (3.0.1)
@@ -194,6 +260,10 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
+    unicode-display_width (2.1.0)
+    view_component (2.49.0)
+      activesupport (>= 5.0.0, < 8.0)
+      method_source (~> 1.0)
     web-console (4.2.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -214,20 +284,29 @@ PLATFORMS
   arm64-darwin-21
 
 DEPENDENCIES
+  action_policy
+  appsignal
+  authlogic
   bootsnap
   capybara
+  cssbundling-rails
   debug
-  importmap-rails
-  jbuilder
+  friendly_id
+  jetrockets-standard (= 1.2.2)
+  jsbundling-rails
+  pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.2)
+  rails-i18n
   redis (~> 4.0)
+  rspec-rails
+  rubocop-rspec
   selenium-webdriver
   sprockets-rails
-  sqlite3 (~> 1.4)
   stimulus-rails
   turbo-rails
   tzinfo-data
+  view_component
   web-console
   webdrivers
 
