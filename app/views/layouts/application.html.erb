@@ -19,13 +19,13 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body class="antialiased">
-    <main class="flex flex-1 h-screen overflow-hidden bg-white">
-      <div class="main">
-        <%= yield %>
+  <body class="relative antialiased">
+    <%= render Header::Component.new %>
 
-        <%= turbo_frame_tag 'async_modal' %>
-      </div>
+    <main>
+      <%= yield %>
     </main>
+
+    <%= turbo_frame_tag 'async_modal' %>
   </body>
 </html>
