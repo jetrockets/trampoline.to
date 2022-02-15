@@ -7,16 +7,16 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="turbo-cache-control" content="no-cache" />
 
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%= stylesheet_link_tag 'application', 'data-turbo-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbo-track': 'reload', defer: true %>
   </head>
 
   <body class="relative antialiased">
@@ -25,6 +25,8 @@
     <main>
       <%= yield %>
     </main>
+
+    <%= render Footer::Component.new %>
 
     <%= turbo_frame_tag 'async_modal' %>
   </body>
