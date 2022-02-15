@@ -2,10 +2,12 @@ import { Application } from '@hotwired/stimulus';
 import { Turbo } from '@hotwired/turbo-rails';
 import Rails from '@rails/ujs';
 
+import { definitions } from 'stimulus:./controllers';
+
 import {
   Dropdown,
   Toggle,
-  Modal
+  Modal,
 } from 'tailwindcss-stimulus-components';
 
 const application = Application.start();
@@ -14,6 +16,8 @@ window.Stimulus = application;
 application.register('dropdown', Dropdown);
 application.register('modal', Modal);
 application.register('toggle', Toggle);
+
+application.load(definitions);
 
 Rails.start();
 Turbo.setProgressBarDelay(500);
