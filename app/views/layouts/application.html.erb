@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="turbo-cache-control" content="no-cache" />
 
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.webmanifest">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -14,7 +19,7 @@
   </head>
 
   <body class="body">
-    <main class="flex flex-1 h-screen bg-white overflow-hidden">
+    <main class="flex flex-1 h-screen overflow-hidden bg-white">
       <div class="main">
         <%= yield %>
       </div>
