@@ -4,8 +4,8 @@ git_source(:github) { |repo| 'https://github.com/#{repo}.git' }
 ruby '3.1.0'
 
 gem 'action_policy'
-gem 'authlogic'
 gem 'appsignal'
+gem 'authlogic'
 
 gem 'bootsnap', require: false
 

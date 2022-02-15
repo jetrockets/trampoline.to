@@ -1,9 +1,14 @@
-/* Entry point for your PostCSS build */
-
 @import "tailwindcss/base";
-@import "./application/base.css";
-
 @import "tailwindcss/components";
-@import "./application/components.css";
-
 @import "tailwindcss/utilities";
+
+.turbo-progress-bar {
+  height: 3px;
+  background-color: #ff2f5b;
+}
+
+.frame__loading_container{
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
