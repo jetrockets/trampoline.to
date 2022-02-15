@@ -19,8 +19,10 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body class="antialiased">
-    <main class="bg-white">
+  <body class="relative antialiased">
+    <%= render Header::Component.new %>
+
+    <main>
       <%= yield %>
     </main>
 

@@ -13,5 +13,5 @@ RSpec.describe Header::Component, type: :component do
   it { is_expected.to have_link 'Мероприятия' }
   it { is_expected.to have_link 'Спикеры' }
   it { is_expected.to have_link 'Контакты' }
-  it { is_expected.to have_link 'Записаться' }
+  it { is_expected.to have_link 'Хочу выступить' }
 end
