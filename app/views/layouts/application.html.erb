@@ -20,12 +20,10 @@
   </head>
 
   <body class="antialiased">
-    <main class="flex flex-1 h-screen overflow-hidden bg-white">
-      <div class="main">
-        <%= yield %>
-
-        <%= turbo_frame_tag 'async_modal' %>
-      </div>
+    <main class="bg-white">
+      <%= yield %>
     </main>
+
+    <%= turbo_frame_tag 'async_modal' %>
   </body>
 </html>
