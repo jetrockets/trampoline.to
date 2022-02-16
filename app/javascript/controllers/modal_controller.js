@@ -10,6 +10,8 @@ export default class ModalController extends Controller {
   }
 
   clickOutside(event) {
+    if (event.cancelable) event.preventDefault();
+
     event.preventDefault();
     this.hide();
   }
