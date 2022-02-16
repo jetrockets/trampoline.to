@@ -1,18 +1,26 @@
 import { Controller } from 'stimulus';
 
-import { useClickOutside } from 'stimulus-use';
+import { useClickOutside, useWindowResize, useDebounce } from 'stimulus-use';
 
 export default class ModalController extends Controller {
   static targets = ['content'];
 
+  static debounces = ['windowResize'];
+
   connect() {
     useClickOutside(this);
+    useWindowResize(this);
+    useDebounce(this, { wait: 250 });
   }
 
   clickOutside(event) {
     if (event.cancelable) event.preventDefault();
 
     event.preventDefault();
+    this.hide();
+  }
+
+  windowResize() {
     this.hide();
   }
 
