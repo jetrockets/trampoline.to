@@ -1,4 +1,4 @@
-<div class="relative" data-controller="header" data-action="keyup@window->header#escClose">
+<div class="relative" data-controller="modal" data-action="keyup@window->modal#escClose">
   <div class="flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
     <div class="flex justify-start lg:w-0 lg:flex-1">
       <%= link_to_unless_current image_tag('logo.svg', class: 'logo w-auto h-10 sm:h-12', alt: 'Trampoline Logo'), root_url %>
@@ -6,7 +6,7 @@
 
     <div class="-my-2 -mr-2 md:hidden">
       <button
-        data-action="click->header#show"
+        data-action="click->modal#show"
         type="button"
         class="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
       >
@@ -33,7 +33,7 @@
   </div>
 
   <%# mobile menu %>
-  <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right hidden" data-header-target="mobileMenu">
+  <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right hidden" data-modal-target="content">
     <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
       <div class="pt-5 pb-6 px-5">
         <div class="flex items-center justify-between">
@@ -42,7 +42,7 @@
           </div>
           <div class="-mr-2">
             <button
-              data-action="click->header#hide"
+              data-action="click->modal#hide"
               type="button"
               class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
             >
