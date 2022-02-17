@@ -10,8 +10,8 @@
   </div>
 </section>
 
-<section class="mb-20 lg:mb-28 xl:mb-56">
-  <div class="mx-auto container max-w-7xl">
+<section class="mb-20 lg:mb-28 xl:mb-56 px-8 lg:px-0 max-w-7xl container m-auto space-y-24">
+  <div class="sm:px-6 space-y-12">
     <div class="sm:px-6 space-y-12">
       <h2 class="text-3xl md:text-5xl font-medium md:font-extralight">Митапы каждый последний четверг месяца в&nbsp;офисе JetRockets</h2>
 
@@ -42,52 +42,87 @@
   </div>
 </section>
 
-<section class="mb-20 lg:mb-28 xl:mb-56">
-  <div class="mx-auto container max-w-7xl">
-    <div class="sm:px-6 lg:px-8">
-      <div class="mb-8">
-        <h2 class="text-3xl md:text-5xl font-medium md:font-extralight">Афиша</h2>
-      </div>
+<section class="mb-20 lg:mb-28 xl:mb-56 px-8 lg:px-0 max-w-7xl container m-auto space-y-24">
+  <div>
+    <h2 class="text-center mb-5 text-3xl md:text-5xl font-medium md:font-light">You’re in good company</h2>
+    <div class="mx-auto max-w-5xl mb-">
+      <p class="text-center text-2xl md:text-4xl font-medium md:font-extralight">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+      </p>
+    </div>
+  </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-16 gap-8 mb-8">
-        <div class="flex sm:flex-col sm:justify-start sm:items-start justify-between items-center space-y-3">
-          <h3 class="text-2xl md:text-4xl font-semibold md:font-light">Когда?</h3>
+  <div class="grid grid-cols-3 gap-32">
+    <dl class="space-y-6">
+      <dt class="text-2xl font-extrabold flex flex-col justify-center text-center">
+        <span class="text-6xl">12</span>
+        <span>митапов</span>
+      </dt>
+      <dd class="text-xl font-light text-center">Успели провести уже 12 мероприятий, пока все в Твери</dd>
+    </dl>
 
-          <div class="flex items-center text-right sm:text-left space-x-3">
-            <span class="text-5xl md:text-6xl font-extrabold">24</span>
-            <div class="flex flex-col">
-              <span class="font-extrabold text-xl">февраля</span>
-              <span class="font-medium text-2xl">19:00</span>
-            </div>
+    <dl class="space-y-6">
+      <dt class="text-2xl font-extrabold flex flex-col justify-center text-center">
+        <span class="text-6xl">30+</span>
+        <span>экспертов</span>
+      </dt>
+      <dd class="text-xl font-light text-center">Ведущие профессионалы IT-индустрии страны.</dd>
+    </dl>
+
+    <dl class="space-y-6">
+      <dt class="text-2xl font-extrabold flex flex-col justify-center text-center">
+        <span class="text-6xl">1200+</span>
+        <span>участников</span>
+      </dt>
+      <dd class="text-xl font-light text-center">Разработчики, менеджеры проектов, QA инженеры, студенты</dd>
+    </dl>
+  </div>
+</section>
+
+<section class="mb-20 lg:mb-28 xl:mb-56 px-8 lg:px-0 max-w-7xl container m-auto space-y-24">
+  <div class="sm:px-6 lg:px-8 w-full">
+    <div class="mb-8">
+      <h2 class="text-center sm:text-left text-3xl md:text-5xl font-medium md:font-extralight">Афиша</h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-16 gap-8 mb-8">
+      <div class="flex sm:flex-col sm:justify-start sm:items-start justify-between items-center space-y-3">
+        <h3 class="text-2xl md:text-4xl font-semibold md:font-light">Когда?</h3>
+
+        <div class="flex items-center text-right sm:text-left space-x-3">
+          <span class="text-5xl md:text-6xl font-extrabold">24</span>
+          <div class="flex flex-col">
+            <span class="font-extrabold text-xl">февраля</span>
+            <span class="font-medium text-2xl">19:00</span>
           </div>
         </div>
+      </div>
 
-        <div class="flex sm:flex-col sm:justify-start sm:items-start justify-between items-center space-y-3">
-          <h3 class="text-2xl md:text-4xl font-semibold md:font-light">Где?</h3>
+      <div class="flex sm:flex-col sm:justify-start sm:items-start justify-between items-center space-y-3">
+        <h3 class="text-2xl md:text-4xl font-semibold md:font-light">Где?</h3>
 
-          <div class="flex flex-col text-right sm:text-left space-y-3">
-            <span class="font-extrabold text-xl">Офис JetRockets</span>
-            <span class="text-md font-light">Тверь, ул.&nbsp;15&nbsp;лет Октября, 10&nbsp;Б</span>
-          </div>
+        <div class="flex flex-col text-right sm:text-left space-y-3">
+          <span class="font-extrabold text-xl">Офис JetRockets</span>
+          <span class="text-md font-light">Тверь, ул.&nbsp;15&nbsp;лет Октября, 10&nbsp;Б</span>
         </div>
       </div>
+    </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-16 gap-8">
-        <%=
-          render SpeakerCard::Component.new(
-                   name: 'Андрей Новиков',
-                   description: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.',
-                   img_url: 'novikov.jpeg',
-                 )
-        %>
-        <%=
-          render SpeakerCard::Component.new(
-                   name: 'Дарья Пушкарская',
-                   description: 'Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-                   img_url: 'pushkarskaya.jpeg',
-                 )
-        %>
-      </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-16 gap-8">
+      <%=
+        render SpeakerCard::Component.new(
+                 name: 'Андрей Новиков',
+                 description: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.',
+                 img_url: 'novikov.jpeg',
+               )
+      %>
+      <%=
+        render SpeakerCard::Component.new(
+                 name: 'Дарья Пушкарская',
+                 description: 'Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                 img_url: 'pushkarskaya.jpeg',
+               )
+      %>
     </div>
   </div>
 </section>
