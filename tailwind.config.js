@@ -4,10 +4,15 @@ module.exports = {
     './app/views/**/*.erb',
     './app/components/**/*.erb',
     './app/components/**/*.rb',
-    './app/javascripts/**/*.js'
+    './app/javascripts/**/*.js',
   ],
   darkMode: 'media', // or 'media' or 'class'
   plugins: [
-    require('@tailwindcss/forms')()
-  ]
+    require('@tailwindcss/forms')(),
+  ],
+  // theme: {
+  //   minHeight: {
+  //     'half-screen': '50vh',
+  //   },
+  // },
 };
