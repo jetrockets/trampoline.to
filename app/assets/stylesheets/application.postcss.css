@@ -16,3 +16,13 @@
 .blockWrapper {
   @apply mb-6 sm:mb-10 px-4 sm:px-10 lg:px-20 py-8 sm:py-20 lg:py-24  max-w-7xl container m-auto space-y-16 sm:space-y-24 bg-white rounded-lg shadow-sm;
 }
+
+.heroBlock {
+  @apply flex min-h-screen justify-center items-center mx-auto max-w-7xl mb-6 sm:mb-10 px-8 lg:px-0 bg-white rounded-lg shadow-sm;
+}
+
+@media (min-width: 768px) {
+  .heroBlock {
+    min-height: calc(100vh - 5rem);
+  }
+}
