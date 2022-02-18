@@ -18,4 +18,11 @@ FactoryBot.define do
     company { Faker::Company.name  }
     position { Faker::Job.title }
   end
+
+  factory :slot do
+    event
+    speaker
+
+    position { [1,2].sample }
+  end
 end
