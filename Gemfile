@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
-git_source(:github) { |repo| 'https://github.com/#{repo}.git' }
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.0'
 
@@ -28,14 +30,18 @@ gem 'sprockets-rails'
 gem 'stimulus-rails'
 
 gem 'turbo-rails'
-gem 'tzinfo-data', platforms: %i[ mingw mswin x64_mingw jruby ]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'view_component'
 
-gem 'webpacker', require: false
-
 group :development, :test do
-  gem 'debug', platforms: %i[ mri mingw x64_mingw ]
+  gem 'debug', platforms: %i[mri mingw x64_mingw]
+
+  gem 'factory_bot_rails'
+  gem 'faker'
+
+  gem 'isolator'
+
   gem 'rspec-rails'
   gem 'rubocop-rspec', require: false
 end
@@ -46,6 +52,9 @@ end
 
 group :test do
   gem 'capybara'
+
   gem 'selenium-webdriver'
+  gem 'simplecov', require: false
+
   gem 'webdrivers'
 end
