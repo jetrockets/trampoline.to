@@ -3,4 +3,6 @@
 class Speaker < ApplicationRecord
   has_many :slots, dependent: :destroy
   has_many :slots, through: :slots
+
+  validates :name, presence: true
 end

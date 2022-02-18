@@ -11,4 +11,11 @@ FactoryBot.define do
       published_at { 1.day.ago }
     end
   end
+
+  factory :speaker do
+    name { Faker::Name.name }
+    bio { Faker::Lorem.paragraph }
+    company { Faker::Company.name  }
+    position { Faker::Job.title }
+  end
 end
