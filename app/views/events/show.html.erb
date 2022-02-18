@@ -1,6 +1,6 @@
 <%# HERO %>
-<div class="px-4 mx-auto py-32 lg:py-12 lg:px-6 max-w-7xl min-h-screen flex justify-center items-center">
-  <div class="items-center lg:grid lg:grid-cols-12 lg:gap-8">
+<section class="heroBlock">
+  <div class="items-center lg:grid lg:grid-cols-12 lg:gap-8 pt-24 lg:pt-0">
     <div class="mx-auto sm:text-center md:max-w-2xl lg:col-span-6 lg:text-left lg:flex lg:items-center">
       <div>
         <dl class="text-4xl font-extrabold tracking-tight sm:leading-none lg:text-5xl xl:text-6xl">
@@ -15,7 +15,7 @@
       </div>
     </div>
 
-    <div class=" mt-16 lg:col-span-6">
+    <div class="mt-8 pb-10 lg:mt-16 lg:col-span-6">
       <div class="bg-gray-50 sm:max-w-md sm:w-full sm:mx-auto sm:rounded-lg sm:overflow-hidden">
         <div class="px-4 py-8 sm:px-8">
           <strong class="block mb-4 text-lg">
@@ -70,15 +70,15 @@
       </div>
     </div>
   </div>
-</div>
+</section>
 
 <%# Speakers %>
-<div class="px-4 mx-auto mt-8 lg:px-6 lg:mt-24 max-w-7xl">
+<section class="blockWrapper sm:py-10 lg:py-16">
   <div class="text-center">
     <h2 class="mb-12 text-3xl font-extrabold tracking-tight sm:text-4xl">Спикеры</h2>
     <!--p class="text-xl text-gray-500">Nulla quam felis, enim faucibus proin velit, ornare id pretium. Augue ultrices sed arcu condimentum vestibulum suspendisse. Volutpat eu faucibus vivamus eget bibendum cras.</p-->
   </div>
-  <ul class="sm:grid sm:grid-cols-12 sm:gap-6 lg:gap-20">
+  <ul class="sm:grid sm:grid-cols-12 sm:gap-6 lg:gap-20 space-y-12 sm:space-y-0">
     <li class="col-span-4 col-start-3">
       <div class="space-y-4">
         <div class="aspect-w-3 aspect-h-2">
@@ -179,137 +179,141 @@
       </div>
     </li>
   </ul>
-</div>
+</section>
 
 <%# time table %>
-<div class="max-w-xl px-4 mx-auto mt-8 lg:px-6 lg:mt-24">
-  <div class="text-center">
-    <h2 class="mb-12 text-3xl font-extrabold tracking-tight sm:text-4xl">Расписание</h2>
-  </div>
+<section class="blockWrapper sm:py-10 lg:py-16">
+  <div class="max-w-xl mx-auto">
+    <div class="text-center">
+      <h2 class="mb-12 text-3xl font-extrabold tracking-tight sm:text-4xl">Расписание</h2>
+    </div>
 
-  <ul class="" x-max="1">
-    <% 4.times do %>
-      <li class="py-6">
-        <div class="flex space-x-4">
-          <img
-            class="w-12 h-12 rounded-full"
-            src="https://uploads-ssl.webflow.com/610adf49f8e20d7d70d8b688/61fd57e3cbb0c4d31ece5ba6_%D0%BF%D1%83%D1%88%D0%BA%D0%B0%D1%80%D1%81%D0%BA%D0%B0%D1%8F%20%D0%B4%D0%B0%D1%80%D1%8C%D1%8F.jpg"
-            alt=""
-          />
+    <ul class="" x-max="1">
+      <% 4.times do %>
+        <li class="py-6">
+          <div class="flex flex-col items-center sm:items-start sm:flex-row sm:space-x-4">
+            <img
+              class="w-24 h-24 sm:w-12 sm:h-12 rounded-full"
+              src="https://uploads-ssl.webflow.com/610adf49f8e20d7d70d8b688/61fd57e3cbb0c4d31ece5ba6_%D0%BF%D1%83%D1%88%D0%BA%D0%B0%D1%80%D1%81%D0%BA%D0%B0%D1%8F%20%D0%B4%D0%B0%D1%80%D1%8C%D1%8F.jpg"
+              alt=""
+            />
 
-          <div>
-            <div class="flex mb-2">
-              <h3 class="text-sm font-semibold border-b-2 border-indigo-600">Нюансы Kubernetes</h3>
+            <div class="flex flex-col items-center sm:block text-center sm:text-left">
+              <div class="flex mb-2">
+                <h3 class="text-sm font-semibold border-b-2 border-indigo-600">Нюансы Kubernetes</h3>
+              </div>
+
+              <p class="text-sm text-gray-500 max-w-md">
+                Контейнеризация и, в частности, Kubernetes – стандарт для запуска приложений в бою. Это несложно, но есть нюансы...
+              </p>
             </div>
 
-            <p class="text-sm text-gray-500">
-              Контейнеризация и, в частности, Kubernetes – стандарт для запуска приложений в бою. Это несложно, но есть нюансы...
-            </p>
+            <span class="text-sm text-gray-900 font-semibold sm:text-gray-500 whitespace-nowrap self-center sm:self-start mt-1">19:15-20:00</span>
           </div>
-
-          <span class="text-sm text-gray-500 whitespace-nowrap">19:15-20:00</span>
-        </div>
-      </li>
-    <% end %>
-  </ul>
-</div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</section>
 
 <%# photos %>
-<div class="w-full mt-8">
-  <div class="flex flex-row flex-wrap">
-    <div class="w-full md:w-1/2 h-64 md:h-auto overflow-hidden">
-      <a
-        class="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover duration-300 transition-transform hover:scale-110"
-        href="#"
-        title="Link"
-        style="background-image: url(https://picsum.photos/seed/1/800/600);"
-      >
-        Link
-      </a>
-    </div>
+<%#
+  <div class="w-full mt-8">
+    <div class="flex flex-row flex-wrap">
+      <div class="w-full md:w-1/2 h-64 md:h-auto overflow-hidden">
+        <a
+          class="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover duration-300 transition-transform hover:scale-110"
+          href="#"
+          title="Link"
+          style="background-image: url(https://picsum.photos/seed/1/800/600);"
+        >
+          Link
+        </a>
+      </div>
 
-    <div class="w-full md:w-1/2 overflow-hidden">
-      <div class="flex flex-col sm:flex-row md:flex-col -mx-2">
-        <div class="w-full sm:w-1/2 md:w-full h-48 xl:h-64 sm:mb-0">
-          <a
-            class="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover duration-300 transition-transform hover:scale-110"
-            href="#"
-            title="Link"
-            style="background-image: url(https://picsum.photos/seed/2/800/600);"
-          >
-            Link
-          </a>
-        </div>
-        <div class="w-full sm:w-1/2 md:w-full h-48 xl:h-64 overflow-hidden">
-          <a
-            class="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover duration-300 transition-transform hover:scale-110"
-            href="#"
-            title="Link"
-            style="background-image: url(https://picsum.photos/seed/3/800/600);"
-          >
-            Link
-          </a>
+      <div class="w-full md:w-1/2 overflow-hidden">
+        <div class="flex flex-col sm:flex-row md:flex-col -mx-2">
+          <div class="w-full sm:w-1/2 md:w-full h-48 xl:h-64 sm:mb-0">
+            <a
+              class="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover duration-300 transition-transform hover:scale-110"
+              href="#"
+              title="Link"
+              style="background-image: url(https://picsum.photos/seed/2/800/600);"
+            >
+              Link
+            </a>
+          </div>
+          <div class="w-full sm:w-1/2 md:w-full h-48 xl:h-64 overflow-hidden">
+            <a
+              class="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover duration-300 transition-transform hover:scale-110"
+              href="#"
+              title="Link"
+              style="background-image: url(https://picsum.photos/seed/3/800/600);"
+            >
+              Link
+            </a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="w-full md:w-1/2 overflow-hidden">
-      <div class="flex flex-wrap -mx-2">
-        <div class="w-1/2 h-32 md:h-48 overflow-hidden">
-          <a
-            class="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover duration-300 transition-transform hover:scale-110"
-            href="#"
-            title="Link"
-            style="background-image: url(https://picsum.photos/seed/4/800/600);"
-          >
-            Link
-          </a>
-        </div>
+      <div class="w-full md:w-1/2 overflow-hidden">
+        <div class="flex flex-wrap -mx-2">
+          <div class="w-1/2 h-32 md:h-48 overflow-hidden">
+            <a
+              class="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover duration-300 transition-transform hover:scale-110"
+              href="#"
+              title="Link"
+              style="background-image: url(https://picsum.photos/seed/4/800/600);"
+            >
+              Link
+            </a>
+          </div>
 
-        <div class="w-1/2 h-32 md:h-48 overflow-hidden">
-          <a
-            class="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover duration-300 transition-transform hover:scale-110"
-            href="#"
-            title="Link"
-            style="background-image: url(https://picsum.photos/seed/10/800/600);"
-          >
-            Link
-          </a>
-        </div>
+          <div class="w-1/2 h-32 md:h-48 overflow-hidden">
+            <a
+              class="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover duration-300 transition-transform hover:scale-110"
+              href="#"
+              title="Link"
+              style="background-image: url(https://picsum.photos/seed/10/800/600);"
+            >
+              Link
+            </a>
+          </div>
 
-        <div class="w-1/2 h-32 md:h-48 overflow-hidden">
-          <a
-            class="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover duration-300 transition-transform hover:scale-110"
-            href="#"
-            title="Link"
-            style="background-image: url(https://picsum.photos/seed/11/800/600);"
-          >
-            Link
-          </a>
-        </div>
+          <div class="w-1/2 h-32 md:h-48 overflow-hidden">
+            <a
+              class="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover duration-300 transition-transform hover:scale-110"
+              href="#"
+              title="Link"
+              style="background-image: url(https://picsum.photos/seed/11/800/600);"
+            >
+              Link
+            </a>
+          </div>
 
-        <div class="w-1/2 h-32 md:h-48 sm:mb-0 overflow-hidden">
-          <a
-            class="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover duration-300 transition-transform hover:scale-110"
-            href="#"
-            title="Link"
-            style="background-image: url(https://picsum.photos/seed/15/800/600);"
-          >
-            Link
-          </a>
+          <div class="w-1/2 h-32 md:h-48 sm:mb-0 overflow-hidden">
+            <a
+              class="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover duration-300 transition-transform hover:scale-110"
+              href="#"
+              title="Link"
+              style="background-image: url(https://picsum.photos/seed/15/800/600);"
+            >
+              Link
+            </a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="w-full md:w-1/2 h-64 md:h-auto overflow-hidden">
-      <a
-        class="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover duration-300 transition-transform hover:scale-110"
-        href="#"
-        title="Link"
-        style="background-image: url(https://picsum.photos/seed/21/800/600);"
-      >
-        Link
-      </a>
+      <div class="w-full md:w-1/2 h-64 md:h-auto overflow-hidden">
+        <a
+          class="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover duration-300 transition-transform hover:scale-110"
+          href="#"
+          title="Link"
+          style="background-image: url(https://picsum.photos/seed/21/800/600);"
+        >
+          Link
+        </a>
+      </div>
     </div>
   </div>
-</div>
+%>
