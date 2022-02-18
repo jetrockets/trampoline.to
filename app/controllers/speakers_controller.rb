@@ -1,4 +1,7 @@
 class SpeakersController < ActionController::Base
-  def index;
+  def index
+  end
+
+  def show
   end
 end
