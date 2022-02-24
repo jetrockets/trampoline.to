@@ -1,1 +1,15 @@
-<div>speakers</div>
+<section class="blockWrapper">
+  <div class="flex flex-col items-center justify-around">
+    <div class="max-w-4xl px-4 pt-20 pb-12">
+      <h1 class="text-5xl md:text-6xl font-bold text-center">Спикеры</h1>
+    </div>
+
+    <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-14 py-10 md:py-18">
+      <% 13.times do %>
+        <div>
+          <%= render SpeakerCard::Default::Component.new %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
