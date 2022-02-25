@@ -1,14 +1,14 @@
 <a href="#" class="shadowOverlayContainer">
   <div class="flex flex-col p-6 border rounded-md space-y-5 cursor-pointer bg-white shadowOverlay">
-    <div class="flex justify-between items-center">
-      <div class="bg-gray-900 bg-opacity-90 rounded-tl-lg rounded-br-lg text-white py-1 px-2 flex items-center">
+    <div class="flex flex-col md:flex-row justify-between items-center md:space-x-2 space-y-3 md:space-y-0">
+      <div class="self-start bg-gray-900 bg-opacity-90 rounded-tl-lg rounded-br-lg text-white py-1 px-2 flex items-center">
         <div class="font-bold text-4xl mr-1">#8</div>
         <div class="font-medium leading-5">trampoline<br />meetup</div>
       </div>
       <div class="font-semibold text-lg">24 февраля 2022</div>
     </div>
 
-    <div class="flex items-center space-x-3">
+    <div class="flex flex-col md:flex-row text-center md:text-left items-center space-x-3">
       <div class="speakerIcon">
         <%= image_tag('pushkarskaya.jpeg', alt: 'Дарья Пушкарская') %>
       </div>
@@ -17,7 +17,7 @@
         <p class="leading-4">Как создать онлайн-школу (и главное, зачем)</p>
       </div>
     </div>
-    <div class="flex items-center space-x-3">
+    <div class="flex flex-col md:flex-row text-center md:text-left items-center space-x-3">
       <div class="speakerIcon">
         <%= image_tag('novikov.jpeg', alt: 'Андрей Новиков') %>
       </div>
