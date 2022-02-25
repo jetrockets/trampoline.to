@@ -39,7 +39,7 @@
   </div>
 
   <%# mobile menu %>
-  <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right hidden" data-modal-target="content">
+  <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right hidden z-50" data-modal-target="content">
     <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
       <div class="pt-5 pb-6 px-5">
         <div class="flex items-center justify-between">
@@ -63,9 +63,9 @@
 
         <div class="mt-6">
           <nav class="grid">
-            <%= link_to 'Мероприятия', '#', class: 'py-4 font-bold text-gray-500 hover:text-gray-700 hover:bg-gray-50' %>
-            <%= link_to 'Спикеры', '#', class: 'py-4 font-bold text-gray-500 hover:text-gray-700 hover:bg-gray-50' %>
-            <%= link_to 'Контакты', '#', class: 'py-4 font-bold text-gray-500 hover:text-gray-700 hover:bg-gray-50' %>
+            <%= link_to 'Мероприятия', events_url, class: 'py-4 font-bold text-gray-500 hover:text-gray-700 hover:bg-gray-50 z-50' %>
+            <%= link_to 'Спикеры', speakers_url, class: 'py-4 font-bold text-gray-500 hover:text-gray-700 hover:bg-gray-50 z-50' %>
+            <%= link_to 'Контакты', '#', class: 'py-4 font-bold text-gray-500 hover:text-gray-700 hover:bg-gray-50 z-50' %>
           </nav>
         </div>
       </div>
