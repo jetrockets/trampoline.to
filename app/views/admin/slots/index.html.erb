@@ -1,0 +1,25 @@
+<% if @slots.empty? %>
+  <div class="container">
+    <%= render Admin::EmptyResults::Component.new(title: 'No Slots Found', url: new_admin_slot_url) %>
+  </div>
+<% end %>
+
+<% if @slots.exists? %>
+  <div class="container">
+    <table>
+      <thead>
+        <th>ID</th>
+        <th>Date</th>
+      </thead>
+
+      <tbody>
+        <% @slots.each do |event| %>
+          <tr>
+            <td><%= event.id %></td>
+            <td><%= event.date %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<% end %>

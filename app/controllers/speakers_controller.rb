@@ -1,9 +1,7 @@
-class SpeakersController < ActionController::Base
+class SpeakersController < ApplicationController
   def index
-    render :layout => 'application'
   end
 
   def show
-    render :layout => 'application'
   end
 end

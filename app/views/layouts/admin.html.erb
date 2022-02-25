@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html prefix="og: http://ogp.me/ns#" lang="<%= I18n.locale %>" xml:lang="<%= I18n.locale %>">
+  <head>
+    <title>Trampoline</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="turbo-cache-control" content="no-cache" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'admin', 'data-turbo-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbo-track': 'reload', defer: true %>
+  </head>
+
+  <body class="relative antialiased bg-gray-50 md:mt-10">
+    <div class=" mx-auto max-w-6xl flex justify-center">
+      <aside class="min-w-min md:mr-6 rounded-lg overflow-hidden">
+        <div class="shadow-sm">
+          <%= render Admin::Sidebar::Component.new %>
+        </div>
+      </aside>
+
+      <main class="flex-1 rounded-lg overflow-hidden shadow-sm">
+        <%= yield %>
+      </main>
+    </div>
+
+    <%= turbo_frame_tag 'async_modal' %>
+  </body>
+</html>

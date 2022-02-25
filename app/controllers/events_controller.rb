@@ -1,11 +1,9 @@
 # frozen_string_literal: true
 
-class EventsController < ActionController::Base
+class EventsController < ApplicationController
   def index
-    render :layout => 'application'
   end
 
   def show
-    render :layout => 'application'
   end
 end

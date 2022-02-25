@@ -19,6 +19,7 @@
     "build:css": "NODE_ENV=production postcss ./app/assets/stylesheets/application.postcss.css -o ./app/assets/builds/application.css",
     "build": "NODE_ENV=production npx ./esbuild.config.js --prod",
     "dev:css": "postcss ./app/assets/stylesheets/application.postcss.css -o ./app/assets/builds/application.css --watch",
+    "admin:css": "postcss ./app/assets/stylesheets/admin.postcss.css -o ./app/assets/builds/admin.css --watch",
     "dev:js": "node ./esbuild.config.js",
     "lint": "eslint ./app/javascript --ext .js --quiet --fix --ignore-path ./.gitignore"
   },

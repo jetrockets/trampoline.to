@@ -1,0 +1,58 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.turbo-progress-bar {
+  height: 3px;
+  background-color: #ff2f5b;
+}
+
+.frame__loading_container{
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.blockWrapper {
+  @apply mb-6 sm:mb-10 px-4 sm:px-10 lg:px-20 py-8 sm:py-20 lg:py-24  max-w-7xl container m-auto space-y-16 sm:space-y-24 bg-white rounded-lg shadow-sm;
+}
+
+.heroBlock {
+  @apply flex min-h-screen justify-center items-center mx-auto max-w-7xl mb-6 sm:mb-10 px-8 lg:px-0 bg-white rounded-lg shadow-sm;
+}
+
+.speakerIcon{
+  @apply rounded-full overflow-hidden;
+  max-width: 100px;
+}
+
+.shadowOverlayContainer {
+  @apply relative;
+  z-index: 1;
+}
+
+.shadowOverlay {
+ @apply relative;
+}
+
+.shadowOverlay::after {
+  @apply rounded-md inset-0 absolute w-full h-full opacity-25 transition;
+  content: '';
+  z-index: -1;
+  background-image: linear-gradient(to right bottom, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff, #f7f5ff, #f0ebff, #eae1ff, #ddcaff, #d2b2ff, #c999fc, #c27ff8);
+  transform: translate(10px, 10px);
+}
+
+.shadowOverlay:hover:after {
+  @apply opacity-50
+}
+
+@media (min-width: 768px) {
+  .heroBlock {
+    min-height: calc(100vh - 5rem);
+  }
+}
+
+.container {
+ @apply p-12 py-8 mx-auto bg-white h-full;
+}
