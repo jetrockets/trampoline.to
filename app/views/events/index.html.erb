@@ -1,19 +1,65 @@
-<section class="heroBlock">
-  <div class="flex flex-col items-center justify-around">
+<section class="flex justify-center items-center mx-auto max-w-7xl mb-6 sm:mb-10 py-10 px-4 md:px-24 bg-white rounded-lg shadow-sm">
+  <div class="flex flex-col items-center justify-around space-y-7 md:space-y-12">
     <div class="max-w-4xl px-4 pt-24">
-      <h1 class="text-5xl md:text-6xl font-bold text-center">Ближайшее мероприятие</h1>
+      <h1 class="text-4xl md:text-6xl font-bold text-center">Ближайшее мероприятие</h1>
     </div>
 
-    <div class="w-full py-10 px-16 md:py-18 md:px-52 flex justify-center items-center">
-      <%= image_tag('logo-textless.svg', class: 'h-full w-full max-w-sm', alt: 'Trampoline Logo') %>
+    <div class="text-center">
+      <div class="text-gray-500 text-md md:text-xl italic">Митап №8</div>
+      <div class="text-2xl md:text-5xl font-bold mb-3">24 февраля 19:00</div>
+      <div class="text-gray-500 text-md md:text-xl italic">
+        Площадка: офис JetRockets в&nbsp;Твери <br />Адрес: Тверь, ул.&nbsp;15&nbsp;лет Октября, 10&nbsp;Б
+      </div>
+    </div>
+
+    <div class="space-y-10 lg:space-y-20">
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between lg:space-x-7 xl:space-x-10 shadowOverlayContainer">
+        <div class="shrink-0 self-center lg:self-start w-11/12 md:w-7/12 lg:w-5/12 mb-4 lg:mb-0 shadowOverlay">
+          <div class="rounded-md overflow-hidden w-full">
+            <%= image_tag('novikov.jpeg', alt: 'Андрей Новиков') %>
+          </div>
+          <div class="p-3 absolute right-0 bottom-0 left-0 z-50 bg-gray-900 bg-opacity-90 rounded-b-md text-white">
+            <div class="md:text-lg text-md font-semibold">Андрей Новиков</div>
+            <div class="md:text-base text-sm">Бэкенд-разработчик Evil Martians</div>
+          </div>
+        </div>
+        <div>
+          <h2 class="text-2xl md:text-5xl font-bold mb-1 md:mb-3">Нюансы Kubernetes</h2>
+          <p class="text-gray-500">
+            Контейнеризация и, в частности, Kubernetes – стандарт для запуска приложений в бою. Это несложно, но есть нюансы. Обсудим, что нужно сделать, чтобы
+            приложение работало быстро и надежно. Посмотрим, как работают requests и limits на ресурсы, чем должны отличаться liveness и readiness пробы и на
+            что следует обращать внимание в мониторинге.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between lg:space-x-7 xl:space-x-10 shadowOverlayContainer">
+        <div class="shrink-0 self-center lg:self-start w-11/12 md:w-7/12 lg:w-5/12 mb-4 lg:mb-0 shadowOverlay">
+          <div class="rounded-md overflow-hidden">
+            <%= image_tag('pushkarskaya.jpeg', alt: 'Дарья Пушкарская') %>
+          </div>
+          <div class="p-3 absolute right-0 bottom-0 left-0 z-50 bg-gray-900 bg-opacity-90 rounded-b-md text-white">
+            <div class="md:text-lg text-md font-semibold">Дарья Пушкарская</div>
+            <div class="md:text-base text-sm">Предприниматель в сфере онлайн-обучения</div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-2xl md:text-5xl font-bold mb-1 md:mb-3">Как создать онлайн-школу (и главное, зачем)</h2>
+          <p class="text-gray-500">
+            Расскажу, как запускать образовательные проекты и почему это важно для сообщества и для самих создателей-разработчиков. Поделюсь опытом открытия
+            онлайн-школы по веб-разработке, а также других проектов.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="flex justify-center items-center mx-auto max-w-7xl mb-6 sm:mb-10 py-10 px-8 bg-white rounded-lg shadow-sm">
+<section class="flex justify-center items-center mx-auto max-w-7xl mb-6 sm:mb-10 py-10 px-4 md:px-8 bg-white rounded-lg shadow-sm">
   <div class="flex flex-col flex-1 w-full items-center justify-center">
     <div class="max-w-4xl px-4 mb-7">
-      <h2 class="text-5xl md:text-6xl font-bold text-center">Прошедшие мероприятие</h2>
+      <h2 class="text-4xl md:text-6xl font-bold text-center">Прошедшие мероприятие</h2>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 w-full">
       <%= render EventCard::Component.new %>
