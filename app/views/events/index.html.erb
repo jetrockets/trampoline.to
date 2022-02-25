@@ -13,45 +13,8 @@
     </div>
 
     <div class="space-y-10 lg:space-y-20">
-      <div class="flex flex-col lg:flex-row lg:items-center justify-between lg:space-x-7 xl:space-x-10 shadowOverlayContainer">
-        <div class="shrink-0 self-center lg:self-start w-11/12 md:w-7/12 lg:w-5/12 mb-4 lg:mb-0 shadowOverlay">
-          <div class="rounded-md overflow-hidden w-full">
-            <%= image_tag('novikov.jpeg', alt: 'Андрей Новиков') %>
-          </div>
-          <div class="p-3 absolute right-0 bottom-0 left-0 z-50 bg-gray-900 bg-opacity-90 rounded-b-md text-white">
-            <div class="md:text-lg text-md font-semibold">Андрей Новиков</div>
-            <div class="md:text-base text-sm">Бэкенд-разработчик Evil Martians</div>
-          </div>
-        </div>
-        <div>
-          <h2 class="text-2xl md:text-5xl font-bold mb-1 md:mb-3">Нюансы Kubernetes</h2>
-          <p class="text-gray-500">
-            Контейнеризация и, в частности, Kubernetes – стандарт для запуска приложений в бою. Это несложно, но есть нюансы. Обсудим, что нужно сделать, чтобы
-            приложение работало быстро и надежно. Посмотрим, как работают requests и limits на ресурсы, чем должны отличаться liveness и readiness пробы и на
-            что следует обращать внимание в мониторинге.
-          </p>
-        </div>
-      </div>
-
-      <div class="flex flex-col lg:flex-row lg:items-center justify-between lg:space-x-7 xl:space-x-10 shadowOverlayContainer">
-        <div class="shrink-0 self-center lg:self-start w-11/12 md:w-7/12 lg:w-5/12 mb-4 lg:mb-0 shadowOverlay">
-          <div class="rounded-md overflow-hidden">
-            <%= image_tag('pushkarskaya.jpeg', alt: 'Дарья Пушкарская') %>
-          </div>
-          <div class="p-3 absolute right-0 bottom-0 left-0 z-50 bg-gray-900 bg-opacity-90 rounded-b-md text-white">
-            <div class="md:text-lg text-md font-semibold">Дарья Пушкарская</div>
-            <div class="md:text-base text-sm">Предприниматель в сфере онлайн-обучения</div>
-          </div>
-        </div>
-
-        <div>
-          <h2 class="text-2xl md:text-5xl font-bold mb-1 md:mb-3">Как создать онлайн-школу (и главное, зачем)</h2>
-          <p class="text-gray-500">
-            Расскажу, как запускать образовательные проекты и почему это важно для сообщества и для самих создателей-разработчиков. Поделюсь опытом открытия
-            онлайн-школы по веб-разработке, а также других проектов.
-          </p>
-        </div>
-      </div>
+      <%= render SlotCard::Component.new %>
+      <%= render SlotCard::Component.new %>
     </div>
   </div>
 </section>
