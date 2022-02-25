@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :events
     resources :speakers
     resources :slots
+    resources :dashboard, only: [:index]
   end
 
   root to: 'home#index'

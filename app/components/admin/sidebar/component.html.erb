@@ -3,7 +3,7 @@
     <%= link_to_unless_current image_tag('logo.svg', class: 'logo w-auto h-10', alt: 'Trampoline Logo'), admin_root_url %>
   </div>
   <nav class="mt-5 flex-1 px-2 space-y-1 " aria-label="Sidebar">
-    <%= link_to admin_root_url, class: 'text-gray-600 hover:text-indigo-600 group flex items-center px-2 py-2 font-medium rounded-md text-lg' do %>
+    <%= link_to admin_root_path, class: "sidebarLink #{current? "active", admin_root_path}" do %>
       <svg
         class="text-current mr-3 h-6 w-6"
         x-description="Heroicon name: home"
@@ -23,7 +23,7 @@
       <span>Dashboard</span>
     <% end %>
 
-    <%= link_to admin_speakers_url, class: 'text-gray-600 hover:text-indigo-600 group flex items-center px-2 py-2 font-medium rounded-md text-lg' do %>
+    <%= link_to admin_speakers_url, class: "sidebarLink #{current? "active", admin_speakers_url}" do %>
       <svg
         class="mr-3 h-6 w-6 text-current"
         x-description="Heroicon name: users"
@@ -43,7 +43,7 @@
       <span>Speakers</span>
     <% end %>
 
-    <%= link_to admin_events_url, class: 'text-gray-600 hover:text-indigo-600 group flex items-center px-2 py-2 font-medium rounded-md text-lg' do %>
+    <%= link_to admin_events_url, class: "sidebarLink #{current? "active", admin_events_url}" do %>
       <svg
         class="mr-3 h-6 w-6 text-current"
         x-description="Heroicon name: calendar"
@@ -63,7 +63,7 @@
       <span>Events</span>
     <% end %>
 
-    <%= link_to admin_slots_url, class: 'text-gray-600 hover:text-indigo-600 group flex items-center px-2 py-2 font-medium rounded-md text-lg' do %>
+    <%= link_to admin_slots_url, class: "sidebarLink #{current? "active", admin_slots_url}" do %>
       <svg
         class="mr-3 h-6 w-6 text-current"
         x-description="Heroicon name: inbox"

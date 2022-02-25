@@ -56,3 +56,11 @@
 .container {
  @apply p-12 py-8 mx-auto bg-white h-full;
 }
+
+.sidebarLink {
+ @apply text-gray-600 hover:text-indigo-600 flex items-center px-2 py-2 font-medium rounded-md text-lg;
+}
+
+.sidebarLink.active  {
+  color: blue;
+}
