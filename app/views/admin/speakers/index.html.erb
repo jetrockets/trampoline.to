@@ -1,0 +1,25 @@
+<% if @speakers.empty? %>
+  <div class="container">
+    <%= render Admin::EmptyResults::Component.new(title: 'No Speakers Found', url: new_admin_speaker_url) %>
+  </div>
+<% end %>
+
+<% if @speakers.exists? %>
+  <div class="container">
+    <table>
+      <thead>
+        <th>ID</th>
+        <th>Date</th>
+      </thead>
+
+      <tbody>
+        <% @slots.each do |event| %>
+          <tr>
+            <td><%= event.id %></td>
+            <td><%= event.date %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<% end %>

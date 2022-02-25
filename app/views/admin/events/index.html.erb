@@ -1,0 +1,25 @@
+<% if @events.empty? %>
+  <div class="container">
+    <%= render Admin::EmptyResults::Component.new(title: 'No Events Found', url: new_admin_event_url) %>
+  </div>
+<% end %>
+
+<% if @events.exists? %>
+  <div class="container">
+    <table>
+      <thead>
+        <th>ID</th>
+        <th>Date</th>
+      </thead>
+
+      <tbody>
+        <% @events.each do |event| %>
+          <tr>
+            <td><%= event.id %></td>
+            <td><%= event.date %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<% end %>
