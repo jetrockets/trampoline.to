@@ -1,3 +1,126 @@
 <div class="container">
-  <span>dashboard</span>
+  <h1 class="text-4xl font-bold text-center text-indigo-600 mb-5">Dashboard</h1>
+  <div class="mb-10">
+    <h2 class="text-2xl font-bold mb-5">Registered</h2>
+    <div class="shadow overflow-x-auto sm:rounded-lg">
+      <table class="min-w-full divide-y overflow-hidden divide-gray-200">
+        <thead class="bg-gray-50">
+          <tr>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Event</th>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
+            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Phone</th>
+            <th scope="col" class="relative px-6 py-3">
+              <span class="sr-only">Edit</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody x-max="2">
+          <tr class="bg-white" x-description="Odd row">
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Jane Cooper</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Event 1</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">jane.cooper@example.com</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">+7(999)999-99-99</td>
+          </tr>
+
+          <tr class="bg-gray-50" x-description="Even row">
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Cody Fisher</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Event 2</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">cody.fisher@example.com</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">+7(999)999-99-99</td>
+          </tr>
+
+          <tr class="bg-white" x-description="Odd row">
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Esther Howard</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Event 1</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">esther.howard@example.com</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">+7(999)999-99-99</td>
+          </tr>
+
+          <tr class="bg-gray-50" x-description="Even row">
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Jenny Wilson</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Event 1, Event 2</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">jenny.wilson@example.com</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">+7(999)999-99-99</td>
+          </tr>
+
+          <tr class="bg-white" x-description="Odd row">
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Kristin Watson</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Event 1</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">kristin.watson@example.com</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">+7(999)999-99-99</td>
+          </tr>
+
+          <tr class="bg-gray-50" x-description="Even row">
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Cameron Williamson</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Event 1</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">cameron.williamson@example.com</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">+7(999)999-99-99</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div>
+    <h2 class="text-2xl font-bold mb-5">Feedback</h2>
+    <ul class="-mb-8">
+      <li>
+        <div class="relative pb-8">
+          <span class="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+          <div class="relative flex items-start space-x-3">
+            <div class="relative">
+              <img
+                class="h-10 w-10 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white"
+                src="https://images.unsplash.com/photo-1520785643438-5bf77931f493?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=8&amp;w=256&amp;h=256&amp;q=80"
+                alt=""
+              />
+            </div>
+            <div class="min-w-0 flex-1">
+              <div>
+                <div class="text-sm">
+                  <a href="#" class="font-medium text-gray-900">Eduardo Benz</a>
+                </div>
+                <p class="mt-0.5 text-sm text-gray-500">Commented 6h ago</p>
+              </div>
+              <div class="mt-2 text-sm text-gray-700">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt nunc ipsum tempor purus vitae id. Morbi in vestibulum nec varius. Et diam
+                  cursus quis sed purus nam.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <div class="relative pb-8">
+          <div class="relative flex items-start space-x-3">
+            <div class="relative">
+              <img
+                class="h-10 w-10 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white"
+                src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=8&amp;w=256&amp;h=256&amp;q=80"
+                alt=""
+              />
+            </div>
+            <div class="min-w-0 flex-1">
+              <div>
+                <div class="text-sm">
+                  <a href="#" class="font-medium text-gray-900">Jason Meyers</a>
+                </div>
+                <p class="mt-0.5 text-sm text-gray-500">Commented 2d ago</p>
+              </div>
+              <div class="mt-2 text-sm text-gray-700">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt nunc ipsum tempor purus vitae id. Morbi in vestibulum nec varius. Et diam
+                  cursus quis sed purus nam. Scelerisque amet elit non sit ut tincidunt condimentum. Nisl ultrices eu venenatis diam.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>

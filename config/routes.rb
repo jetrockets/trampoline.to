@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   namespace :admin do
     get 'sign_in', to: 'user_sessions#new'
 
-    root to: "events#index"
+    root to: "dashboard#index"
     # get "/", to "events#index"
 
     resources :events
